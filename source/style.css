@@ -1,3 +1,23 @@
 .hide {
   display: none;
 }
+
+#floatingAd {
+  position: fixed;
+  right: 20px;
+  width: 300px;
+  z-index: 1000;
+  animation: floatVertical 8s ease-in-out infinite;
+}
+#floatingAd:hover {
+  animation-play-state: paused;
+}
+@keyframes floatVertical {
+  0%,
+  100% {
+    top: 15%;
+  }
+  50% {
+    top: 65%;
+  }
+}

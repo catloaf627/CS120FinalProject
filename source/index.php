@@ -19,6 +19,8 @@
 <p class="h1 text-center mb-5 mt-3">  
 Welcome to MovieHub! </p>
 <p class="h2 text-center">The ultimate destination for movie enthusiasts </p>
+<?php include 'trending-movie.php'; ?>
+    
 <?php include 'popular-movie.php'; ?>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
    <script src="index.js"></script>
