@@ -14,27 +14,16 @@
     
     <link rel="stylesheet" href="./style.css"/>
     <style>
-        .hero-section {
-  width: 100%;
-}
-
-.hero-bg {
-  height: 400px;
-  background-image: url("https://image.tmdb.org/t/p/original/zkThiZAaAie8Lw7RAc5yPTOewBV.jpg$0");
-  background-size: cover;
-  background-position: 70% 30%;
-  position: relative;
-  border-radius: 0;
-}
-
-.hero-mask {
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
-}
-
+    .hero-bg {
+        height: 300px;
+        background-image: url("https://image.tmdb.org/t/p/original/zkThiZAaAie8Lw7RAc5yPTOewBV.jpg$0");
+        background-size: cover;
+        background-position: 70% 30%;
+        position: relative;
+        border-radius: 0;
+        margin-bottom: 40px;
+    }
     </style>
-
 </head>
 <body>
 <?php include 'nav.php'; ?>
@@ -53,7 +42,6 @@
     </div>
     </div>
 </div>
-<br>
 <?php include 'trending-movie.php'; ?>
     
 <?php include 'popular-movie.php'; ?>

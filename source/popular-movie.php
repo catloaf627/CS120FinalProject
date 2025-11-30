@@ -17,40 +17,21 @@ echo "<div style='max-width: 70%; margin: 0 auto;'>";
 echo "<h2 class='mb-3'>What's Popular</h2>";
 echo "<div class='row g-3'>"; 
 foreach ($movies as $movie) {
+    $movieId = $movie['id'];
     echo "
-    <div class='col-6 col-md-4 col-lg-2 mb-3'> 
+    <div class='col-6 col-md-4 col-lg-2 mb-3'>
+    <a href='movie.php?id=$movieId' style='text-decoration: none; color: inherit;'>
         <div class='card h-100 shadow-sm'>
             <img src='https://image.tmdb.org/t/p/w500{$movie['poster_path']}' class='card-img-top' alt='poster' />
             <div class='card-body p-2'> <h6 class='card-title text-truncate'>{$movie['title']}</h6>
                 <small class='text-muted'>Rating: {$movie['vote_average']}/10</small>
                 
                 <p class='card-text small d-none' id='desc_{$movie['id']}'>{$movie['overview']}</p>
-                
-                <button type='button' class='btn btn-primary btn-sm w-100 mt-2' 
-                        id='moreInfoBtn{$movie['id']}' 
-                        onclick=\"toggleInfo('desc_{$movie['id']}', 'moreInfoBtn{$movie['id']}')\">
-                    More
-                </button>
             </div>
         </div>
+        </a>
     </div>";
 }
 echo "</div>";
 echo "</div>";
 ?>
-
-<script>
-function toggleInfo(descID, btnID) {
-    let desc = document.getElementById(descID);
-    let btn = document.getElementById(btnID);
-
-    // Toggle the Bootstrap 'd-none' class (which means display: none)
-    desc.classList.toggle("d-none");
-
-    if (desc.classList.contains("d-none")) {
-        btn.textContent = "More";
-    } else {
-        btn.textContent = "Less";
-    }
-}
-</script>

@@ -1,5 +1,6 @@
 <?php 
 $movieID = $_GET['id'];
+$isLoggedIn = true;
 if (!$movieID) {
     echo "<h1>No Movie ID provided.</h1>";
     exit();
@@ -106,21 +107,23 @@ $directorList = implode(", ", $directors);
 
             <h4 class="mt-4">Overview</h4>
             <p class="lead fs-6"><?php echo nl2br(htmlspecialchars($data["overview"])); ?></p>
+
             <?php if (!empty($directorList)): ?>
             <div class="mb-3">
                 <strong>Director:</strong> 
                 <span class="text-light"><?php echo htmlspecialchars($directorList); ?></span>
             </div>
             <?php endif; ?>
-            <?php if ($isLoggedIn): ?>
-                <div class="mt-4 d-flex gap-2">
-                    <a href="watchlist.php?id=<?php echo $movieID; ?>" class="btn btn-warning btn-lg">Add to Watchlist</a>
-                    <a href="watched.php?id=<?php echo $movieID; ?>" class="btn btn-success btn-lg">Mark as Watched</a>
-                </div>
-            <?php endif; ?>
         </div>
     </div>
-</div>
+    <div class="mt-4 d-flex gap-2">
+        <?php if ($isLoggedIn): ?>
+            <a href="watchlist.php?id=<?php echo $movieID; ?>" class="btn btn-warning btn-lg">Add to Watchlist</a>
+            <a href="mwatched.php?id=<?php echo $movieID; ?>" class="btn btn-success btn-lg">Mark as Watched</a>
+        <?php endif; ?>
+        </div>
+        </div>
+    </div>
 
 <div class="container pb-5">
 

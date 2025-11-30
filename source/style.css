@@ -21,3 +21,84 @@
     top: 65%;
   }
 }
+
+.movie-header {
+  margin-top: -150px;
+  position: relative;
+  z-index: 2;
+}
+
+.poster {
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+}
+.genre-badge {
+  background: #333;
+  border-radius: 8px;
+  padding: 5px 12px;
+  margin-right: 6px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.section-title {
+  border-left: 4px solid #e50914;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+.cast-card {
+  background: #1a1a1a;
+  border: none;
+  transition: transform 0.2s;
+}
+.cast-card:hover {
+  transform: translateY(-5px);
+  background: #252525;
+}
+.cast-img {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.cast-body {
+  padding: 10px;
+}
+.cast-name {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0;
+}
+.cast-role {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.review-card {
+  background: #1a1a1a;
+  border-left: 3px solid #444;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+.review-author {
+  color: #fff;
+  font-weight: bold;
+}
+.review-date {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.gallery-img {
+  width: 100%;
+  border-radius: 8px;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+.gallery-img:hover {
+  opacity: 0.8;
+}
