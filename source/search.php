@@ -69,7 +69,6 @@
                         <h5><?php echo htmlspecialchars($movie['title']); ?></h5>
                         <p><span class="label">Release Date:</span> <?php echo htmlspecialchars($movie['release_date']); ?></p>
                         <p><span class="label">Rating:</span> <?php echo htmlspecialchars($movie['vote_average']); ?>/10</p>
-                        <p><?php echo htmlspecialchars($movie['overview']); ?></p>
                     </div>
             </a>
                 </div>
